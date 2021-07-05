@@ -34,7 +34,7 @@
                                 <input type="text" value="<?= isset($data) ? $data->title: '' ?>" class="form-control" name="title" id="title" required>
                             </div>
 
-                            <div class="form-group col-md-6">
+                            <!-- <div class="form-group col-md-6">
                                 <label for="img" class="text-sm mr-2 pt-2">Image <?= isset($data) ? '' : '<span class="text-danger">*</span>' ?> :</label>
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="img" accept=".png, .jpg, .jpeg, .gif, .bmp, .svg" name="img" <?= isset($data) ? '' : 'required' ?>>
@@ -43,7 +43,7 @@
                                 <?php if(isset($data)){?>
                                     <p class="mt-3">Current image : <img src="<?=base_url('assets/portfolio/').$data->img_src?>" alt="" height="90"></p>   
                                 <?php }?> 
-                            </div>
+                            </div> -->
 
                             <div class="form-group col-md-6">
                                 <label for="category" class="text-sm mr-2 pt-2">Category :</label>

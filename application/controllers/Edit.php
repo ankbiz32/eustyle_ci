@@ -16,7 +16,7 @@ class Edit extends MY_Controller {
             $data=$this->input->post();
             $path=null;
             if($_FILES['img']['name']!=null){
-                $path ='assets/clients';
+                $path ='assets/images';
                 $initialize = array(
                     "upload_path" => $path,
                     "allowed_types" => "jpg|jpeg|png|bmp|webp|gif",
@@ -32,7 +32,9 @@ class Edit extends MY_Controller {
                     $imgdata = $this->upload->data();
                     $data['img_src'] = $imgdata['file_name'];
                     $d= $this->fetch->getInfoById($id,'feedbacks');
-                    $path= 'assets/clients/'.$d->img_src;
+                    if($d->img_src){
+                        $path= 'assets/images/'.$d->img_src;
+                    }
                 }
             }
             $status= $this->edit->updateInfo($data, $id, 'feedbacks');
@@ -65,27 +67,27 @@ class Edit extends MY_Controller {
             if($this->form_validation->run() == true){
                 $data=$this->input->post();
 
-                if( $_FILES['img']['name']!=null ){
-                    $old_img= $this->fetch->getInfoById($id,'portfolio');
-                    $unlink= 'assets/portfolio/'.$old_img->img_src;
-                    $path ='assets/portfolio';
-                    $initialize = array(
-                        "upload_path" => $path,
-                        "allowed_types" => "jpg|jpeg|png|bmp|webp",
-                        "remove_spaces" => TRUE
-                    );
-                    $this->load->library('upload', $initialize);
-                    if (!$this->upload->do_upload('img')) {
-                        $this->session->set_flashdata('failed',$this->upload->display_errors());
-                        redirect('Admin/Portfolio');
-                    }
-                    else {
-                        $filedata = $this->upload->data();
-                        $fileName = $filedata['file_name'];
+                // if( $_FILES['img']['name']!=null ){
+                //     $old_img= $this->fetch->getInfoById($id,'portfolio');
+                //     $unlink= 'assets/portfolio/'.$old_img->img_src;
+                //     $path ='assets/portfolio';
+                //     $initialize = array(
+                //         "upload_path" => $path,
+                //         "allowed_types" => "jpg|jpeg|png|bmp|webp",
+                //         "remove_spaces" => TRUE
+                //     );
+                //     $this->load->library('upload', $initialize);
+                //     if (!$this->upload->do_upload('img')) {
+                //         $this->session->set_flashdata('failed',$this->upload->display_errors());
+                //         redirect('Admin/Portfolio');
+                //     }
+                //     else {
+                //         $filedata = $this->upload->data();
+                //         $fileName = $filedata['file_name'];
                         
-                        $data['img_src']=$fileName;
-                    } 
-                }
+                //         $data['img_src']=$fileName;
+                //     } 
+                // }
 
                 $status= $this->edit->updateInfo($data, $id, 'portfolio');
 
@@ -103,6 +105,14 @@ class Edit extends MY_Controller {
                 $this->session->set_flashdata('failed',strip_tags(validation_errors()));
                 redirect('Admin/Portfolio');
             }
+        }
+        public function PortfolioImages($id)
+        {
+            $data=$this->fetch->getInfoType('portfolio_images','portfolio_id',$id);
+            $this->load->view('admin/adminheader',['title'=>'Edit portfolio images','data'=>$data]); 
+            $this->load->view('admin/adminaside'); 
+            $this->load->view('admin/portfolio-images-form'); 
+            $this->load->view('admin/adminfooter');  
         }
 
         public function Clients($id)

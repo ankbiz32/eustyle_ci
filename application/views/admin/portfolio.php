@@ -28,7 +28,6 @@
                   <thead>
                     <tr>
                       <th style="width:50px">S. No</th>
-                      <th style="width:60px">Image</th>
                       <th>Project name</th>
                       <th>Category</th>
                       <th>Short descr</th>
@@ -39,9 +38,6 @@
                     <?php $z=1; foreach ($data as $d){?>
                       <tr>
                         <td class="text-center"><?=$z?> .</td>
-                        <td>
-                          <img src="<?=base_url()?>assets/portfolio/<?=$d->img_src?>" alt="img" width="60">
-                        </td>
                         <td><?=$d->title?></td>
                         <td><?=$d->category?></td>
                         <td>
@@ -49,7 +45,8 @@
                         </td>
                         <td>
                           <!-- <a href="<?=base_url('Delete/portfolio/'.$d->id)?>" onclick="confirmation(event)" class="btn del-btn btn-sm btn-danger mb-1" title="Delete data"><i class="fa fa-trash-alt"></i></a> -->
-                          <a href="<?=base_url('Edit/portfolio/'.$d->id)?>" class="btn btn-primary btn-sm mb-1" title="Edit training"><i class="fa fa-edit"></i></a>
+                          <a href="<?=base_url('Edit/portfolioImages/'.$d->id)?>" class="btn btn-primary btn-sm mb-1" title="Edit Portfolio images"><i class="fa fa-edit"></i> Images</a>
+                          <a href="<?=base_url('Edit/portfolio/'.$d->id)?>" class="btn btn-primary btn-sm mb-1" title="Edit Portfolio content"><i class="fa fa-edit"></i> Content</a>
                         </td>
                       </tr>
                     <?php $z++; }?>

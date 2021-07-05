@@ -41,6 +41,22 @@ class Delete extends MY_Controller {
             }
         }
 
+        public function portfolioImage($id)
+        { 
+            $d= $this->fetch->getInfoById($id, 'portfolio_images');
+            $path= 'assets/portfolio/'.$d->img_src;
+            $status= $this->delete->deleteInfo($id, 'portfolio_images');
+            if($status){
+                unlink("$path");
+                $this->session->set_flashdata('success','Work image deleted !');
+                redirect('Edit/portfolioImages/'.$d->portfolio_id);
+            }
+            else{
+                $this->session->set_flashdata('failed','Error!');
+                redirect('Edit/portfolioImages/'.$d->portfolio_id);
+            }
+        }
+
 
         public function Feedback($id)
         {

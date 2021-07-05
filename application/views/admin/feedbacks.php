@@ -37,7 +37,6 @@
                       <th>Image</th>
                       <th>Feedback</th>
                       <th>Name & designation</th>
-                      <th>Rating</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -45,10 +44,9 @@
                     <!-- display Data-->
                     <?php foreach ($data as $d){?>
                       <tr>
-                        <td class=""><img src="<?=base_url('assets/clients/').$d->img_src?>" alt="" height="50"></td>
+                        <td class=""><img src="<?=$d->img_src ? base_url('assets/images/').$d->img_src : base_url('assets/images/avatar.jpg') ?>" alt="" height="50"></td>
                         <td><?=substr($d->content,0,100)." . . ."?></td>
                         <td class=""><?=$d->name?> <br><small>(<?=$d->desig?>)</small> </td>
-                        <td class=""><?=$d->rating?> </td>
                         <td>
                           <a href="<?=base_url('Delete/Feedback/'.$d->id)?>" onclick="confirmation(event)" class="btn del-btn btn-danger mb-1" title="Delete Feedback"><i class="fa fa-trash-alt"></i></a>
                           <button class="btn btn-primary mb-1" data-toggle="modal" data-target="#edit<?=$d->id?>" title="Edit Feedback"><i class="fa fa-edit"></i></button>
@@ -70,8 +68,8 @@
                                       <div class="row">
                                         <div class="form-group col-12">
                                           <label for="content" class="m-0">Feedback:</label>
-                                          <p class="m-0 text-sm text-muted">(Max. 400 Characters)</p>
-                                          <textarea name="content" id="content" minlength="1" maxlength="400" class="form-control mt-2" rows="5" required><?=$d->content?></textarea>
+                                          <p class="m-0 text-sm text-muted">(Max. 600 Characters)</p>
+                                          <textarea name="content" id="content" minlength="1" maxlength="600" class="form-control mt-2" rows="5" required><?=$d->content?></textarea>
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="name" class="m-0">Person name:</label>
@@ -88,17 +86,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="name" class="m-0">Designation:</label>
-                                          <input type="text" class="form-control mt-2" minlength="1" maxlength="100" name="desig" value="<?=$d->desig?>" id="desig" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="name" class="m-0">Feedback rating:</label>
-                                          <select name="rating" class="form-control mt-2">
-                                            <option value="5" <?=$d->rating==5?' selected':''?>>5</option>
-                                            <option value="4" <?=$d->rating==4?' selected':''?>>4</option>
-                                            <option value="3" <?=$d->rating==3?' selected':''?>>3</option>
-                                            <option value="2" <?=$d->rating==2?' selected':''?>>2</option>
-                                            <option value="1" <?=$d->rating==1?' selected':''?>>1</option>
-                                          </select>
+                                          <input type="text" class="form-control mt-2" minlength="1" maxlength="100" name="desig" value="<?=$d->desig?>" id="desig">
                                         </div>
                                       </div>
                                 </div>
@@ -145,8 +133,8 @@
               <div class="row">
                 <div class="form-group col-12">
                     <label for="content" class="m-0">Feedback: *</label>
-                    <p class="text-sm text-muted mt-0 mb-2">(Max. 400 Characters)</p>
-                    <textarea name="content" id="content" class="form-control" minlength="1" maxlength="400" rows="5" required></textarea>
+                    <p class="text-sm text-muted mt-0 mb-2">(Max. 600 Characters)</p>
+                    <textarea name="content" id="content" class="form-control" minlength="1" maxlength="600" rows="5" required></textarea>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="name" class="m-0">Person Name: *</label>
@@ -154,26 +142,16 @@
                     <input type="text" class="form-control" name="name" maxlength="40" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="img" class="m-0">Person image:</label>
+                  <label for="img" class="m-0">Person image <small>(optional)</small>:</label>
                   <p class="text-sm text-muted">( Max image size : 500kb )</p>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input m-0" id="img" name="img" required>
+                    <input type="file" class="custom-file-input m-0" id="img" name="img">
                     <label class="custom-file-label" for="customFile">Choose file</label>
                   </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="name" class="m-0">Designation:</label>
-                    <input type="text" class="form-control mt-2" minlength="1" maxlength="100" name="desig" id="desig" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name" class="m-0">Feedback rating:</label>
-                  <select name="rating" class="form-control mt-2" required>
-                    <option value="5">5</option>
-                    <option value="4">4</option>
-                    <option value="3">3</option>
-                    <option value="2">2</option>
-                    <option value="1">1</option>
-                  </select>
+                    <label for="name" class="m-0">Designation <small>(optional)</small>:</label>
+                    <input type="text" class="form-control mt-2" maxlength="50" name="desig" id="desig" value=" ">
                 </div>
               </div>
         </div>

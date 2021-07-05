@@ -11,7 +11,9 @@ class Home extends MY_Controller {
 	{	
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
-		$response['works']=$this->fetch->getInfoByLim('portfolio', 3);
+		$response['works']=$this->fetch->getWorks(3);
+        // var_dump('<pre>',$response['works']);exit;
+		$response['feedbacks']=$this->fetch->getInfo('feedbacks');
 		// var_dump('<pre>',$response);exit;
 		$this->load->view('header',$response);
 		$this->load->view('index');

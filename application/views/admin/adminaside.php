@@ -36,14 +36,14 @@
             </a>
           </li>
 
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a href="<?=base_url('Admin/Feedbacks')?>" class="nav-link <?php if($this->uri->segment(2)=="Feedbacks"){echo ' CustomActive';}?>">
               <i class="far fa-comment-dots nav-icon"></i>
               <p>Feedbacks</p>
             </a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="<?=base_url('Admin/Clients')?>" class="nav-link <?php if($this->uri->segment(2)=="Clients"){echo ' CustomActive';}?>">
               <i class="fa fa-users nav-icon"></i>
               <p>Clients</p>
