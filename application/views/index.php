@@ -343,13 +343,13 @@
             <a class="team-item__name" href="#">Abhishek Chinagi</a>
             <div class="team-item__position">Business Manager</div>
           </div>
-          <div class="our-experts__item team-item">
+          <!-- <div class="our-experts__item team-item">
             <div class="team-item__photo">
               <img src="<?= base_url() ?>assets/images/team/item-3.png" alt="" />
             </div>
             <a class="team-item__name" href="#">elena stephan</a>
             <div class="team-item__position">Architect</div>
-          </div>
+          </div> -->
           <a class="our-experts__item team-item team-item--join" href="#" target="_blank">
             <div class="team-item__photo">
               <svg width="67" height="45">
@@ -381,20 +381,21 @@
               <div class="pricing-item swiper-slide">
                 <div class="pricing-item__wrapper">
                   <div class="pricing-item__top">
-                    <div class="pricing-item__plan">basic plan</div>
+                    <div class="pricing-item__plan">Compact plan</div>
                     <div class="pricing-item__caption"></div>
                   </div>
                   <div class="pricing-item__price">
                     <sup class="currency">₹</sup>
-                    <span class="digit">3499</span>
-                    <span class="square">/ m2</span>
+                    <span class="digit">1.5L </span>
+                    <span class="square"> Starting</span>
                   </div>
                   <div class="pricing-item__tax">
                     10% taxed will include after make price
                   </div>
                   <ul class="pricing-item__included">
-                    <li>survey & preliminary sketches</li>
-                    <li>3d sketches</li>
+                    <li>1BHK - starting from ₹1.5L</li>
+                    <li>2BHK - starting from ₹2.25L</li>
+                    <li>3BHK - starting from ₹3.5L</li>
                   </ul>
                   <a class="pricing-item__btn" href="#contact">start my project</a>
                 </div>
@@ -402,23 +403,23 @@
               <div class="pricing-item swiper-slide">
                 <div class="pricing-item__wrapper">
                   <div class="pricing-item__top">
-                    <div class="pricing-item__plan">premium plan</div>
+                    <div class="pricing-item__plan">Ideal plan</div>
                     <div class="pricing-item__caption">
                       <span>Popular</span>
                     </div>
                   </div>
                   <div class="pricing-item__price">
                     <sup class="currency">₹</sup>
-                    <span class="digit">4999</span>
-                    <span class="square">/ m2</span>
+                    <span class="digit">2.25L </span>
+                    <span class="square"> Starting</span>
                   </div>
                   <div class="pricing-item__tax">
                     10% taxed will include after make price
                   </div>
                   <ul class="pricing-item__included">
-                    <li>survey & preliminary sketches</li>
-                    <li>3d sketches</li>
-                    <li>materials & building</li>
+                    <li>1BHK - starting from ₹2.25L</li>
+                    <li>2BHK - starting from ₹3.5L</li>
+                    <li>3BHK - starting from ₹5L</li>
                   </ul>
                   <a class="pricing-item__btn" href="#contact">start my project</a>
                 </div>
@@ -426,22 +427,21 @@
               <div class="pricing-item swiper-slide">
                 <div class="pricing-item__wrapper">
                   <div class="pricing-item__top">
-                    <div class="pricing-item__plan">ultimate plan</div>
+                    <div class="pricing-item__plan">Elite plan</div>
                     <div class="pricing-item__caption"></div>
                   </div>
                   <div class="pricing-item__price">
                     <sup class="currency">₹</sup>
-                    <span class="digit">6999</span>
-                    <span class="square">/ m2</span>
+                    <span class="digit">3.5L </span>
+                    <span class="square"> Starting</span>
                   </div>
                   <div class="pricing-item__tax">
                     10% taxed will include after make price
                   </div>
                   <ul class="pricing-item__included">
-                    <li>survey & preliminary sketches</li>
-                    <li>3d sketches</li>
-                    <li>materials & building</li>
-                    <li>free support & repair 2 years</li>
+                    <li>1BHK - starting from ₹3.5L</li>
+                    <li>2BHK - starting from ₹4.25L</li>
+                    <li>3BHK - starting from ₹6.5L</li>
                   </ul>
                   <a class="pricing-item__btn" href="#contact">start my project</a>
                 </div>

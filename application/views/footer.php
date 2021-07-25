@@ -76,21 +76,17 @@
               <div class="footer__column-title">Principle Architect</div>
               <p class="footer__address">Archana Chinagi</p>
               <address class="footer__address">
-                archana.chinagi@gmail.com
+                <a class="text-white" href="mailto:<?= $web->email ?>"><?= $web->email ?></a>
               </address>
-              <a class="footer__phone" href="tel:+919590688265"
-                >+91 - 9590688265</a
-              >
+              <a class="footer__phone" href="tel:+91<?= $web->phone1 ?>">+91 - <?= $web->phone1 ?></a>
             </div>
             <div class="footer__column col-12 col-md">
               <div class="footer__column-title">Business Manager</div>
               <p class="footer__address">Abhishek Chinagi</p>
               <address class="footer__address">
-                archana.chinagi@gmail.com
+                <a class="text-white" href="mailto:<?= $web->email ?>"><?= $web->email ?></a>
               </address>
-              <a class="footer__phone" href="tel:+919972083015"
-                >+91 - 9972083015</a
-              >
+              <a class="footer__phone" href="tel:+91<?= $web->phone2 ?>">+91 - <?= $web->phone2 ?></a>
             </div>
             <div class="footer__column col-12 col-sm">
               <div class="footer__column-title">Quick Links</div>
