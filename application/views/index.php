@@ -252,7 +252,7 @@
       <div class="studio-section__wrapper">
         <div class="studio-section__image studio-section__image--big">
           <img src="<?= base_url() ?>assets/images/studio/01.jpg" width="1045" height="640" alt="" />
-          <a class="studio-section__play-video fancybox" href="#ourStory">Play video</a>
+          <!-- <a class="studio-section__play-video fancybox" href="#ourStory">Play video</a> -->
         </div>
         <div class="studio-section__image">
           <img src="<?= base_url() ?>assets/images/studio/02.jpg" width="470" height="640" alt="" />
@@ -269,20 +269,20 @@
             <img src="<?= base_url('assets/images/') ?>review/1.jpg" width="165" height="165" alt="">
           </span> -->
           <span class="review__image-author review__image-author--two" data-aos="fade-right">
-            <img src="<?= base_url('assets/images/') ?>review/2.jpg" width="102" height="102" alt="">
+            <img src="<?= base_url('assets/images/') ?>review/heart.svg" width="84" height="84" alt="">
           </span>
           <span class="review__image-author review__image-author--three" data-aos="fade-up">
-            <img src="<?= base_url('assets/images/') ?>review/3.jpg" width="125" height="125" alt="">
+            <img src="<?= base_url('assets/images/') ?>review/like.svg" width="84" height="84" alt="">
           </span>
           <span class="review__image-author review__image-author--four" data-aos="fade-left">
-            <img src="<?= base_url('assets/images/') ?>review/4.jpg" width="84" height="84" alt="">
+            <img src="<?= base_url('assets/images/') ?>review/star.svg" width="84" height="84" alt="">
           </span>
           <span class="review__image-author review__image-author--five" data-aos="fade-left">
-            <img src="<?= base_url('assets/images/') ?>review/5.jpg" width="75" height="75" alt="">
+            <img src="<?= base_url('assets/images/') ?>review/right.svg" width="84" height="84" alt="">
           </span>
-          <span class="review__image-author review__image-author--six" data-aos="fade-right">
-            <img src="<?= base_url('assets/images/') ?>review/6.jpg" width="60" height="60" alt="">
-          </span>
+          <!-- <span class="review__image-author review__image-author--six" data-aos="fade-right">
+            <img src="<?= base_url('assets/images/') ?>review/star.svg" width="60" height="60" alt="">
+          </span> -->
         </div>
         <div class="review__content col-12 col-md-6 align-self-center" data-aos="fade">
           <h2 class="works-section__heading heading">Testimonials</h2>
@@ -331,14 +331,14 @@
         <div class="our-experts__list">
           <div class="our-experts__item team-item">
             <div class="team-item__photo">
-              <img src="<?= base_url() ?>assets/images/team/item-1.png" alt="" />
+              <img src="<?= base_url() ?>assets/images/team/2.jpg" alt="" />
             </div>
             <a class="team-item__name" href="#">Archana Chinagi</a>
             <div class="team-item__position">CEO & Principal Architect</div>
           </div>
           <div class="our-experts__item team-item">
             <div class="team-item__photo">
-              <img src="<?= base_url() ?>assets/images/team/item-2.png" alt="" />
+              <img src="<?= base_url() ?>assets/images/team/1.jpg" alt="" />
             </div>
             <a class="team-item__name" href="#">Abhishek Chinagi</a>
             <div class="team-item__position">Business Manager</div>

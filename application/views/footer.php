@@ -137,7 +137,7 @@
               © 2021 <span>Eustyle Interiors</span> All Rights Reserved
             </div>
             <div class="footer__design col-12 col-sm-6">
-              Developed by <span>DigiKraft Social</span>
+              Developed by <span><a href="https://aller.in" target="_blank" class="text-white">Aller Technologies</a></span>
             </div>
           </div>
         </div>
